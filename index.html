@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <!-- This is my first self made project -->
+
+    <link rel="stylesheet" href="converter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="brand-name">
+        <h1>Himanshu Kans</h1>
+        <p>Premium Financial Tool</p>
+    </header>
+
+    <div class="container">
+        <h2>Currency Converter</h2>
+        <form>
+            <div class="value">
+                <p>Enter Value</p>
+                <input value="1" type="number">
+            </div>
+            
+            <div class="dropdown">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/US/shiny/64.png">
+                        <select name="from"></select>
+                    </div>
+                </div>
+
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+
+                <div class="to">
+                    <p>To</p>
+                    <div class="select-container">
+                        <img src="https://flagsapi.com/IN/shiny/64.png">
+                        <select name="to"></select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="msg">1 USD = 82.34 INR</div>
+
+            <div class="convert">
+                <button type="button">Convert</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- <div class="chart-container" style="margin-top: 20;">
+        <canvas id="rate-chart"></canvas>
+    </div> -->
+
+    <footer class="footer">
+        <p>© 2026 | Designed & Developed by Himanshu Kansotia</p>
+        <div class="social-links">
+            <a href="https://github.com/Himanshukans" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/himanshu-kansotia-55060217b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script src="country-code.js"></script>
+    <script src="converter.js"></script>
+</body>
+</html>

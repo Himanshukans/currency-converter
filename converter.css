@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif; 
+    -webkit-user-select: none; /* Disable text selection on mobile, safari */
+    user-select: none; /* Disable text selection on mobile, standard syntax */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Premium Gradient */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    width: 370px;  /* for mobile and desktop both */
+    text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);    
+}
+
+h2 {
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.value p, .from p, .to p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+    text-align: left
+}
+
+input {
+    user-select: auto; /* Enable text selection for input fields */
+    -webkit-user-select: auto; /* Enable text selection for input fields on Safari */
+}
+
+form input {
+    width: 100%;
+    border: 1px solid #e2e8f0;
+    font-size: 1.1rem;
+    height: 3.5rem;
+    padding: 0 1rem;
+    border-radius: 0.75rem;
+    outline: none;
+    transition: 0.3s;
+    background-color: #f7fafc;
+}
+
+form input:focus {
+    border-color: #667eea;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 10px;
+}
+
+.dropdown i {
+    font-size: 1.4rem;
+    color: #718096;
+    cursor: pointer;
+    padding: 1.5rem 0 0 1px; 
+    -webkit-tap-highlight-color: transparent; /* for removing the blue highlight on mobile */;
+    transition: transform 0.2s ease;
+}
+
+
+.dropdown i:hover {
+    color: #667eea;
+    transform: scale(1.15); /* size increase on hover */
+}
+
+.dropdown i:active {
+    transform: scale(0.99); /*scale down on click*/
+    color: #5a67d8;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+    transition: 0.3s;
+    width: 110px; 
+}
+
+.select-container:hover {
+    border-color: #667eea;
+}
+
+.select-container img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.select-container select {
+    background: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    padding: 0 0.5rem;
+}
+
+.msg {
+    margin: 2rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2d3748;
+    background: #f0f4ff;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border-left: 5px solid #667eea;
+}
+
+.convert button {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #667eea;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 8px 15px rgba(22, 30, 69, 0.4);
+    transition: all 0.1s ease-in-out; /*smooth transition for hover and active states*/
+    -webkit-tap-highlight-color: transparent; /* for removing the blue highlight on mobile */
+    touch-action: manipulation; /* for better touch response on mobile */
+}
+
+.convert button:hover {
+    background-color: #5a67d8;
+    transition: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 350px;
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .dropdown {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .dropdown i {
+        margin: 10px 0;
+        transform: none !important; /*resetting any transform applied on larger screens*/;
+    }
+
+    .dropdown i:active {
+        transform: scale(1.15) !important; /*suppressing click effect on mobile*/
+    }
+
+    .select-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .brand-name {
+        /* padding-top: 53px; */
+        margin-top: 53px;
+        display: block;
+    }
+
+    .brand-name h1 {
+        font-size: 1.6rem;
+    }
+
+    .footer { 
+        position: relative; 
+        padding-bottom: 20px; 
+    }
+}
+
+.convert button:active {
+    transform: scale(0.92) !important; /*suppressing hover effect on click*/
+    background-color: #3b3a80 !important; /*darker shade on click*/
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); /*deeper shadow on click*/
+    transition: 0.3s; 
+}
+
+.convert button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed; /*indicate that the button is disabled*/
+}
+
+
+.brand-name {
+    position: absolute;
+    top: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.brand-name h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: "Bitcount Prop Single", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings: "slnt" 0, "CRSV" 0.5, "ELSH" 0, "ELXP" 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3); /* subtle shadow for better visibility */
+    margin-bottom: 5px;
+}
+
+.brand-name p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+/* .chart-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 10px;
+    backdrop-filter: blur(5px);
+    position: absolute;
+    margin-top: 35%;
+    height: 3rem;
+} */
+
+.footer {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footer p {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.footer .social-links i {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footer .social-links i:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
